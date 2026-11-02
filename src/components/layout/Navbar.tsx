@@ -1,8 +1,9 @@
 "use client";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { Brand } from "../ui/Brand";
 import { navigation } from "@/data/site";
 export function Navbar() {

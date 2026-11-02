@@ -1,12 +1,8 @@
 "use client";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useRef } from "react";
 import { Compass, Map, CodeXml, Rocket } from "lucide-react";
-import {
-  motion,
-  useReducedMotion,
-  useScroll,
-  useTransform,
-} from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { SectionHeading } from "../ui/SectionHeading";
 const steps = [
   {
@@ -57,6 +53,7 @@ export function ProcessSection() {
             key={title}
             initial={reduced ? false : { opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
+            animate={reduced ? { opacity: 1, y: 0 } : undefined}
             viewport={{ once: true }}
             transition={{ delay: reduced ? 0 : i * 0.12 }}
           >

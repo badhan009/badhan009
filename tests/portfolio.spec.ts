@@ -68,6 +68,11 @@ test("desktop navigation, project carousel, previews and case study", async ({
 test("responsive layout, mobile menu, touch carousel and reduced motion", async ({
   page,
 }) => {
+  const errors: string[] = [];
+  page.on("pageerror", (error) => errors.push(error.message));
+  page.on("console", (message) => {
+    if (message.type() === "error") errors.push(message.text());
+  });
   await page.emulateMedia({ reducedMotion: "reduce" });
   for (const width of [320, 390, 768, 1024, 1440]) {
     await page.setViewportSize({ width, height: 900 });
@@ -143,6 +148,7 @@ test("responsive layout, mobile menu, touch carousel and reduced motion", async 
       });
     }
   }
+  expect(errors).toEqual([]);
 });
 test("WCAG AA accessibility, real contact destination and images", async ({
   page,

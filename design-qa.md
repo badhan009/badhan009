@@ -84,3 +84,9 @@ All listed runtime findings were fixed and recaptured. Strict original-reference
 ## Follow-up polish
 
 Optional: provide real project imagery/content, email, production domain, verified availability, and the full design board. The current implementation is functional and browser-verified with the configuration above.
+
+## Preview follow-up
+
+The local development server returns HTTP 200 and renders correctly, but `localhost:3000` is private to the cloud workspace. The GitHub preview image URL was checked and returns HTTP 200. This session has no public-preview or deployment connector; a live public URL is not available. README now explains the difference and gives the repository/branch needed for hosting.
+
+A development-mode check with reduced motion exposed a server/client hydration attribute mismatch. Reduced-motion preference now uses `useSyncExternalStore` with a stable server snapshot; changes are applied after hydration. All five motion consumers share the hook. Responsive browser tests now assert that reduced-motion pages emit no console or page errors. The regression was verified in development mode as well as the production browser suite.

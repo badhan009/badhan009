@@ -11,7 +11,11 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:3000.
+Open http://localhost:3000 on the machine running the server. In a cloud workspace, this address is internal and is not a public preview link.
+
+For a browser-accessible screenshot, [open the desktop preview on GitHub](https://github.com/badhan009/badhan009/blob/work/docs/previews/desktop.png).
+
+For an interactive public preview, import `badhan009/badhan009` into Vercel, select the `work` branch, and deploy with the detected Next.js defaults (root directory: repository root). No public hosting deployment has been created by this workspace.
 
 ```bash
 npm run typecheck

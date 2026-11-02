@@ -1,13 +1,8 @@
 "use client";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 import Image from "next/image";
 import { useRef, useState, type ReactNode } from "react";
-import {
-  motion,
-  useReducedMotion,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "motion/react";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
 export function CinematicCharacter({ children }: { children: ReactNode }) {
   const scene = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();

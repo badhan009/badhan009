@@ -1,5 +1,6 @@
 "use client";
-import { motion, useReducedMotion } from "motion/react";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { motion } from "motion/react";
 import type { ReactNode } from "react";
 export function ScrollReveal({
   children,

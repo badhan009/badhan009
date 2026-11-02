@@ -1,7 +1,8 @@
 "use client";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useRef, useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { projects } from "@/data/projects";
 import { ProjectInterface } from "./ProjectInterface";
